@@ -11,7 +11,7 @@ steps:
     commands:
       - git clone https://${GIT_ACCESS_TOKEN}@github.com/${GIT_REPO}.git
       - cp .eslintrc ${PROJECT_FOLDER_NAME}/.eslintrc
-      - cp .eslintrc ${PROJECT_FOLDER_NAME}/.eslintoutputrc
+      - cp .eslintoutputrc ${PROJECT_FOLDER_NAME}/.eslintoutputrc
       - cd ${PROJECT_FOLDER_NAME}
       - npm install eslint --save-dev
       - npm i --save-dev eslint-output
