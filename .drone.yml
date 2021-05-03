@@ -9,7 +9,7 @@ steps:
         - failure
         - success
     commands:
-      - RUN apk update && apk add git
+      - apk update && apk add git
       - git clone https://${GIT_ACCESS_TOKEN}@github.com/${GIT_REPO}.git
       - cp .eslintrc ${PROJECT_FOLDER_NAME}/.eslintrc
       - cp .eslintoutputrc ${PROJECT_FOLDER_NAME}/.eslintoutputrc
