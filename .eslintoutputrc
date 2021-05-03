@@ -8,7 +8,7 @@
     {
       "name": "junit",
       "output": "file",
-      "path": "tmp/junit.xml"
+      "path": "esLintOuputRc/junit.xml"
     }
   ],
   "cliEngineConfig": {}
