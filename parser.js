@@ -10,4 +10,4 @@ const result = parser.xml2json(xml, options);
 
 const parsedResult = JSON.stringify(result, "");
 
-console.log(parsedResult);
+console.log(JSON.stringify(parsedResult));
