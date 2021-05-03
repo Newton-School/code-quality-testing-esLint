@@ -17,4 +17,16 @@ steps:
       - npm i --save-dev eslint-output
       - npm i xml-js
       - ./node_modules/.bin/eslint-output ./
+      
+  - name: result
+    image: node:16-alpine3.11
+    when:
+      status:
+        - failure
+        - success
+    depends_on:
+      - code-quality-test
+    commands:
+      - cp parser.js ${PROJECT_FOLDER_NAME}/parser.js
+      - cd ${PROJECT_FOLDER_NAME}
       - node parser.js
