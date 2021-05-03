@@ -1,0 +1,43 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "rules": {
+      "no-console": 1,
+      "no-alert": 1,
+      "for-direction": "error",
+      "block-scoped-var": "warn",
+      "array-callback-return": ["error", { "checkForEach": true, "allowImplicit": true }],
+      "consistent-return": "warn",
+      "curly": ["warn", "multi-or-nest"],
+      "default-case": "error",
+      "default-case-last": "error",
+      "default-param-last": "error",
+      "dot-notation": "warn",
+      "no-case-declarations": "error",
+      "no-constructor-return": "error",
+      "no-else-return": ["error", {"allowElseIf": false}],
+      "eqeqeq": "error",
+      "no-empty-function": "warn",
+      "no-eq-null": "error",
+      "no-floating-decimal": "warn",
+      "no-fallthrough": ["error", { "commentPattern": "break[\\s\\w]*omitted" }],
+      "no-implicit-coercion": "warn",
+      "no-implied-eval": "error",
+      "no-invalid-this": ["error", { "capIsConstructor": false }],
+      "no-lone-blocks": "error",
+      "no-loop-func": "error",
+      "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+      "no-multi-str": "error",
+      "no-redeclare": "warn",
+      "no-self-assign": "error",
+      "no-self-compare": "error",
+      "no-useless-concat": "warn",
+      "id-length": ["error", { "min": 2 }]
+    },
+    "env": {
+        "node": true
+      }
+  }
+  
