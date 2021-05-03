@@ -1,0 +1,20 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: code-quality-test
+    image: node:16-alpine3.11
+    when:
+      status:
+        - failure
+        - success
+    commands:
+      - git clone https://${GIT_ACCESS_TOKEN}@github.com/${GIT_REPO}.git
+      - cp .eslintrc ${PROJECT_FOLDER_NAME}/.eslintrc
+      - cp .eslintrc ${PROJECT_FOLDER_NAME}/.eslintoutputrc
+      - cd ${PROJECT_FOLDER_NAME}
+      - npm install eslint --save-dev
+      - npm i --save-dev eslint-output
+      - npm i xml-js
+      - ./node_modules/.bin/eslint-output ./
+      - node parser.js
